@@ -1,0 +1,5 @@
+/*
+  Content-Security-Policy: frame-ancestors https://their-portal-domain.com https://*.their-portal-domain.com;
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Cache-Control: public, max-age=3600
