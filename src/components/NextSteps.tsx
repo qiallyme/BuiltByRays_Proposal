@@ -4,6 +4,13 @@ export default function NextSteps() {
   return (
     <div className="glass rounded-xl p-4 sm:p-5 card-hover">
       <div className="font-semibold mb-2">Next Steps</div>
+      <p className="text-slate-300 mb-2">
+        Need a deeper explanation? Read the{" "}
+        <a className="underline hover:no-underline" href="/clarification-blanca.html" target="_blank" rel="noopener">
+          Clarification for Blanca
+        </a>.
+      </p>
+
       <p className="text-slate-200 text-sm sm:text-base">
         Choose an option to move forward. Deposit is fully credited toward your first four weeks
         ($250 retainer + $250 buffer).
