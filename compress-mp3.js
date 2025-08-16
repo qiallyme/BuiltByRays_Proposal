@@ -1,6 +1,11 @@
-const { exec } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+import { exec } from 'child_process';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+// Get __dirname equivalent in ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Configuration
 const MAX_SIZE_MB = 25;
@@ -94,8 +99,4 @@ async function processMP3Files() {
 }
 
 // Run the script
-if (require.main === module) {
-    processMP3Files();
-}
-
-module.exports = { processMP3Files, compressMP3 };
+processMP3Files();

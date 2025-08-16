@@ -26,6 +26,37 @@ A professional, mobile-optimized proposal application for BuiltByRays™ executi
 3. Start development server: `npm run dev`
 4. Build for production: `npm run build`
 
+## MP3 Compression
+
+This project includes an automated MP3 compression tool to ensure audio files stay under 25MB for optimal web performance.
+
+### Usage
+
+```bash
+npm run compress-mp3
+```
+
+The script will:
+- Scan all MP3 files in the `public/` directory
+- Check if any files exceed 25MB
+- Automatically compress oversized files using FFmpeg
+- Create backups of original files (with `-original` suffix)
+- Try multiple bitrates (96k, 80k, 64k) to achieve optimal compression
+- Replace original files with compressed versions
+
+### Requirements
+
+- FFmpeg must be installed and available in your system PATH
+- Node.js 18+ for running the compression script
+
+### Manual Compression
+
+If you need to compress a specific file manually:
+
+```bash
+ffmpeg -i "input.mp3" -b:a 96k -ar 44100 "output.mp3"
+```
+
 ## Project Structure
 
 ```
